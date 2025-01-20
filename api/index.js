@@ -28,10 +28,12 @@ const options = {
   }
 };
 app.use(cors(options))
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('¡Hola, Express está funcionando!');
 });
-
+app.get('/api/new-route', (req, res) => {
+  res.send('¡Hola, soy una nueva ruta!');
+});
 routerApi(app);
 
 app.use(handlers.logErrors)

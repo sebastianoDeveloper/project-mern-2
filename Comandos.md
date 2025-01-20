@@ -2,7 +2,10 @@
 
 curl -X GET "http://127.0.0.1:3000/api/v1/products/45" | jq
 curl -X GET "http://localhost:3000/api/v1/products/33d635b2-49ea-42c4-a1cd-a4d5bc96eb5c" | jq
-
+curl -X  POST "https://project-mern-2-production.up.railway.app/api/v1/products/" \
+-H "Content-Type: application/json"
+-d "{\"name\": \"Chocolate Bitter\", \"price\": 39,
+\"image\": \"https://loremflickr.com/2056/5?lock=8590674274411018\"}" | jq
 # METODO POST
 
 curl -X POST "http://localhost:3000/api/v1/products" \
@@ -12,7 +15,7 @@ curl -X POST "http://localhost:3000/api/v1/products" \
 
 curl -X POST "http://localhost:3000/api/v1/products"
 -H "Content-Type: application/json"
--d "{\"name\": \"Producto Nuevo\", \"price\": 99,
+-d "{\"name\": \"Chocolate Bitter\", \"price\": 39,
 \"image\": \"https://loremflickr.com/2056/5?lock=8590674274411018\"}" | jq
 
 curl -X POST "http://localhost:3000/api/v1/products"
